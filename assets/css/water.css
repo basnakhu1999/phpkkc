@@ -1,0 +1,50 @@
+.river {
+	background: linear-gradient(0deg,#0090B8 90%, transparent 90%);
+    top: 40%;
+    width:  100%;
+    height: 60%;
+    position: absolute;
+}
+.riverWrapper {
+	position: relative;
+	z-index: 0;
+}
+.water {
+	position: absolute;
+	width: 100vw;
+	height: 200px;
+	background-repeat: repeat-x;
+	animation: wave 60s linear 0s infinite normal;
+}
+
+.w1 {
+	top: 0;
+	background-image: url('../images/wave1.svg');
+}
+.w2 {
+	top: 40px;
+	animation-duration: 40s;
+	background-image: url('../images/wave2.svg');
+}
+.w3 {
+	top: 80px;
+	animation-duration: 20s;
+	background-image: url('../images/wave3.svg');
+
+}
+
+@keyframes wave {
+	from {
+		background-position-x: 0;
+	}
+	to {
+		background-position-x: 100vw;
+	}
+}
+
+
+@media (max-width: 768px) {
+	.water {
+		background-size: 300vw;
+	}
+}

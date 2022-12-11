@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Pridi&display=swap');
+* {
+	box-sizing: border-box;
+	font-family: 'Pridi', serif;
+	user-select: none;
+}
+body, html {
+	padding: 0;
+	margin: 0;
+	background: linear-gradient(193deg, #031b88, #5c27fe);
+	color: #eee;
+	overflow: hidden;
+}
+main {
+	height: calc(100vh - 1.5rem);
+    position: relative;
+}
+
+
+.topper {
+	min-height: 250px;
+	position: relative;
+    height: 40%;
+}
+.backgroundWrapper {
+	height: 100%;
+	position: absolute;
+}
+.navigationWrapper {
+	height: 100%;
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
+.navigationWrapper span, .navigationWrapper a {
+	transition: .2s cubic-bezier(0.4, 0, 0.25, 1);
+	color: rgb(145, 145, 145);
+}
+.navigationWrapper a:hover {
+	transition: .2s cubic-bezier(0.4, 0, 0.25, 1);
+	color: #eee;
+}
+.navigationWrapper a.active {
+	color: #eee;
+}
+a {
+	text-decoration: none;
+	color: inherit;
+}
+span {
+	display: block;
+}
+.backdrop {
+	background: rgb(45, 13, 255);
+	/* background: linear-gradient(0deg, #1f136e 100%, rgba(104,130,196,1) 40%, rgba(0,80,120,1) 0%); */
+}
+footer {
+	
+}
+
+.startButton:hover {
+	background: #7059a9;	
+	transition: .2s cubic-bezier(0.4, 0, 0.25, 1);
+}
+.startButton, .facebookButton {
+	background: #7C63BC;
+	border-radius: 50px;
+	height: 50px;
+	width: 400px;
+	z-index: 10;
+	position: relative;
+	font-size: 32px;
+	text-align: center;
+	cursor: pointer;
+	margin: 0 auto;
+	position: absolute;
+    bottom: 10%;
+    left: 50%;
+    right: 50%;
+    transform: translateX(-50%);
+	transition: .2s cubic-bezier(0.4, 0, 0.25, 1);
+}
+.facebookButton:hover {
+	background: #32559a;
+	transition: .2s cubic-bezier(0.4, 0, 0.25, 1);
+}
+.facebookButton {
+	background: #4267B2;
+	transition: .2s cubic-bezier(0.4, 0, 0.25, 1);
+}
+.modal {
+	z-index: 999;
+	position: absolute;
+	width: 100vw;
+	height: 100vh;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: rgba(0, 0, 0, .3);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
+}
+.modal > .content {
+	position: relative;
+	border-radius: 20px;
+	width: 90vw;
+	height: 50vh;
+	background: rgba(255, 255, 255, 0.9);
+	color: #333;
+	padding: 20px;
+}
+.exitButton:before {
+	content: "X";
+	font-family: Arial, Helvetica, sans-serif;
+	display: block;
+	font-size: 20px;
+	text-align: center;
+	width: 30px;
+	color: rgba(0, 0, 0, .4);
+}
+.exitButton {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	width: 20px;
+	height: 20px;
+	cursor: pointer;
+}
+.content .title {
+	font-size: 1.5em;
+	border-bottom: rgba(0, 0, 0, .3) solid 3px;
+}
+
+.twocol {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: calc(100% - 1.5em - 3px);
+}
+.kra1 {
+	border-right: rgba(0, 0, 0, .05) solid 1px;
+}
+.twocol .kra1:hover, .twocol .kra2:hover {
+	background-color: rgba(0, 0, 0, .05);
+	transition: .2s cubic-bezier(0.4, 0, 0.25, 1);
+}
+
+.twocol .kra1, .twocol .kra2 {
+	cursor: pointer;
+	transition: .2s cubic-bezier(0.4, 0, 0.25, 1);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	width: 50%;
+	height: 80%;
+
+}
+.kra1 img, .kra2 img {
+	width: 80%;
+	margin-bottom: 10px;
+}
+
+.morecontent {
+	height: 500px;
+	background: #0090B8;
+}
+footer {
+	height: 1.5rem;
+	background: #00408C;
+	text-align: center;
+	font-size: .75rem;
+	z-index: 10000;
+}
+
+.hidden {
+	display: none !important;
+}
+.instruction {
+	display: contents;
+	font-size: .5em;
+	font-size: rgb(99, 99, 99);
+}
+.kra3 {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+textarea {
+	width: 100%;
+	padding: 10px;
+	border-radius: 10px;
+	border: none;
+	height: 60%;
+	resize: none;
+	background: rgba(255, 255, 255, .4);
+	outline: none;
+}
+input {
+	width: 80%;
+	padding: 10px;
+	border-radius: 10px;
+	border: none;
+	background: rgba(255, 255, 255, .4);
+	outline: none;	
+}
+.backdrop {
+	background-repeat: repeat-x;
+	animation: move 60s linear 0s infinite normal;
+	background-image: url('../images/SVG/starr.svg');
+}
+@keyframes move {
+	from {
+		background-position-x: 0;
+	}
+	to {
+		background-position-x: 100vw;
+	}
+	
+}
+.nextButton {
+	margin-top: 20px;
+	border: none;
+	width: 150px;
+	background: #0090B8;
+	color: #fff;
+	border-radius: 5px;
+}
+
+
+@media (max-width: 768px) {
+	.startButton, .facebookButton {
+		width: 330px;
+	}
+}
+
+
+
+
+
+.shown {
+	opacity: 1;
+	transition: 2s cubic-bezier(0.4, 0, 0.25, 1);
+}
+.hide {
+	opacity: 0;
+	transition: 2s cubic-bezier(0.4, 0, 0.25, 1);
+}
