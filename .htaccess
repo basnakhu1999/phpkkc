@@ -1,0 +1,10 @@
+RewriteEngine On 
+
+RewriteRule ^([a-z]{2})/led$ led.php?lang=$1 [NC,L]
+RewriteRule ^([a-z]{2})/$ index.php?lang=$1 [NC,L]
+RewriteRule ^([a-z]{2})/share/(.*)$ share.php?lang=$1&share=$2 [NC,L]
+RewriteRule ^share/(.*)$ share.php?lang=en&share=$1 [NC,L]
+RewriteRule ^api/(.*)$ APISourceAssets/$1.api.php [NC,L]
+
+RewriteRule ^config/(.*)$ - [F,L]
+RewriteRule ^components/(.*)$ - [F,L]
