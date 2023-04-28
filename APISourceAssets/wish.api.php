@@ -23,4 +23,4 @@ $json = json_encode(
 	queryDatabase('INSERT INTO loykrathong (wishId, wishOwner, wishMessage, wishKrathong) VALUES(?, ?, ?, ?);', [ $id, $owner, $message, $krathong ])
 );
 
-sendResponse(400, json_encode(['id' => $id]));
+sendResponse(200, json_encode(['id' => $id]));
